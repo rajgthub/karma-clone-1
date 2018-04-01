@@ -1,0 +1,213 @@
+@import 'abstract';
+@import 'normalize';
+/* Add your custom styles here */
+/* Remember: be organised, use comments and separate your styles into meaningful chunks */
+/* For example: General styles, Navigation styles, Hero styles, Footer etc. */
+
+/*  TIP: When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex' */
+.header {
+  padding: 0 0.938rem;
+  margin: 0 auto;
+  min-width: 37.5rem;
+  height: 4.375rem;
+  background-color: #fff;
+  display:flex;
+  position: fixed;
+  width:100%;
+  justify-content: center;
+  border-bottom: 1px solid #DDD;
+  &:focus {
+    outline: none;
+  }
+  .logo{
+    height: 4.375rem;
+    // width: 4.375rem;
+    // display: block;
+  }
+}
+.container{
+  width:60%;
+  display: flex;
+  justify-content: space-between;
+  // background-color: green;
+  // @include flx-center;
+}
+//  Navigation Section
+
+.navigation {
+  // background-color: #fff;
+  // flex-grow: 1;
+  width: 65%;
+  @include flx-center;
+  &__list{
+    width: 100%;
+    // background-color: green;
+    display: flex;
+    justify-content: space-between;
+    color: #838994;
+    font-size: 1.04rem;
+    list-style: none;
+  }
+  &__item{
+    &:hover{
+      cursor: pointer;
+      color: #333333;
+    }
+    &--active {
+      color: #4c5058;
+      font-weight: 500;
+    }
+  }
+}
+
+// introduction
+.intro {
+  background-image: url('../img/first-background.jpg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45.938rem;
+  overflow: auto;
+  @include flx-center;
+  &__content {
+    padding: 0;
+    color: #1d1e21;
+    display: flex;
+    flex-direction: column;
+  }
+  &__h1{
+    color: white;
+    font-weight: 300;
+    font-size: 3.125rem;
+    margin-bottom: 1rem;
+  }
+  &__h3{
+    @extend .intro__h1;
+    font-size: 1.563rem;
+  }
+  &__buttons {
+    color: white;
+    text-align: center;
+    margin-top: 1.563rem;
+  }
+}
+button {
+  width: 9.688rem;
+  background-color: #f15a29;
+  border-color: #f15a29;
+  text-shadow: none;
+  border-style: none;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 1.125rem;
+}
+button:hover {
+  background-color: #d9400e;
+  border-color: #cf3d0e;
+  cursor: pointer;
+}
+// cases
+.cases {
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 5rem;
+  @include flx-center;
+  &__content{
+    margin-top: 7.875rem;
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+    color: #1d1e21;
+    &>h2{
+      font-size: 2.75rem;
+      margin: 1.625rem 0 4.125rem;
+      margin-left: 6rem;
+      font-weight: 300;
+      align-self: center;
+    }
+  }
+  &__devices{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    &>li{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    &>li:not(:last-child){
+      margin-right: 1rem;
+      
+    }
+    
+  }
+  &__img{
+    width:127px;
+    height: 127px;
+    align-self: center;
+  }
+  &__caption{
+    &>h3{
+      font-weight: 400;
+      font-size: 1.563rem;
+      margin: 2.5rem 0px 1.875rem;
+    }
+  }
+}
+
+// Footer
+.social {
+  background-color: #fff;
+  // background-color: blue;
+  overflow: auto;
+  padding-bottom: 9.375rem;
+  // display: flex;
+  // width: 65%;
+  @include flx-center;
+  &__content{
+    width: 60%;
+    flex-direction: column;
+    // background-color: green;
+    &>hr{
+      border: 0;
+      border-top: 1px solid #eaebec;
+      margin: 1.313rem 0;
+    }
+  }
+  &__collections{
+    @include flx-center;
+    flex-direction: column;
+  }
+  &__icons{
+    &>li{
+      border-radius: 1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: inline-block;
+      margin: 1.25rem 5px;
+      border: 1px solid #eaebec;
+      padding: 0.625rem 0;
+      text-align: center;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  &__twitter{
+    color: #55acee;
+  }
+  &__facebook{
+    color: #4c66a4;
+  }
+  &__instagram{
+    color: #3f729b;
+  }
+  .copy {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #838994;
+  }
+}
+
+
